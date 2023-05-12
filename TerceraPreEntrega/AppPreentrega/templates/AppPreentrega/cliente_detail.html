@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+<p>
+    <strong>Nombre:</strong> {{object.nombre}}
+  </p>
+  <p>
+    <strong>Apellido:</strong> {{object.apellido}}
+  </p>
+  <p>
+    <strong>DNI:</strong> {{object.dni}}
+  </p>
+  <p>
+    <strong>Telefono:</strong> {{object.telefono}}
+  </p>
+  <p>
+    <strong>E-Mail:</strong> {{object.email}}
+  </p>
+
+  <br>
+  <a href="{% url 'clientes' %}">Volver a la lista</a>
+
+
+{% endblock contenido %}

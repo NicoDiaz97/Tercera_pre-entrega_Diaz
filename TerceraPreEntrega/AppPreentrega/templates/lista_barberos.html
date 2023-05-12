@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<h1>Lista de barberos</h1>
+<a href="{% url 'crear_barbero'%}">Agregar un Barbero</a>
+<section>
+    <div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dni</th>
+                    <th>Especialidad</th>
+                    <td></td>
+                </tr>
+                {% for profesional in object_list %}
+                <tr>
+                    <td>{{ profesional.nombre }}        </td>
+                    <td>{{ profesional.apellido }}      </td>
+                    <td>{{ profesional.dni }}           </td>
+                    <td>{{ profesional.especialidad }}  </td>
+                    <td>
+                        <a href="{% url 'ver_barbero' profesional.id %}"> 
+                            <i class="bi bi-eye"></i>
+                        </a>  
+                    </td>
+                    <td>
+                        <a href="{% url 'modificar_barbero' profesional.id %}"> 
+                            <i class="bi bi-pencil"></i>
+                        </a>  
+                    </td>
+                    <td>
+                        <a href="{% url 'eliminar_barbero' profesional.id %}"> 
+                            <i class="bi bi-trash"></i>
+                        </a>  
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock contenido %}

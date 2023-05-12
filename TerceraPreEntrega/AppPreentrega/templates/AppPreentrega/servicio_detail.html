@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+<p>
+    <strong>Tipo:</strong> {{object.tipo}}
+  </p>
+  <p>
+    <strong>Duracion(en minutos):</strong> {{object.duracion_minutos}}
+  </p>
+  <p>
+    <strong>Costo:</strong> {{object.costo}}
+  </p>
+
+  <br>
+  <a href="{% url 'servicios' %}">Volver a la lista</a>
+
+
+{% endblock contenido %}

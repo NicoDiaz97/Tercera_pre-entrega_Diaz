@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+<p>
+    <strong>Nombre:</strong> {{object.nombre}}
+  </p>
+  <p>
+    <strong>Apellido:</strong> {{object.apellido}}
+  </p>
+  <p>
+    <strong>DNI:</strong> {{object.dni}}
+  </p>
+  <p>
+    <strong>Especialidad:</strong> {{object.especialidad}}
+  </p>
+
+  <br>
+  <a href="{% url 'lista_barberos' %}">Volver a la lista</a>
+
+
+{% endblock contenido %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block contenido %}
+
+<p>
+    <strong>Cliente:</strong> {{object.cliente}}
+  </p>
+  <p>
+    <strong>Barbero:</strong> {{object.barbero}}
+  </p>
+  <p>
+    <strong>Servicio:</strong> {{object.servicio}}
+  </p>
+  <p>
+    <strong>Fecha del turno:</strong> {{object.fecha_turno}}
+  </p>
+  <p>
+    <strong>Hora del turno:</strong> {{object.hora_turno}}
+  </p>
+
+  <br>
+  <a href="{% url 'turnos' %}">Volver a la lista</a>
+
+
+{% endblock contenido %}
